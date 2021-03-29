@@ -41,7 +41,9 @@ h2 {
   background-color: #EDF2F4;
 }
 .homepage header {
-  background-color: #8D99AE;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
 .homepage header .container {
   display: flex;
@@ -64,7 +66,8 @@ h2 {
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1em;
-  color: #2B2D42;
+  font-weight: 700;
+  color: white;
 }
 .homepage main {
   padding: 0 0 50px 0;
@@ -80,7 +83,7 @@ h2 {
 }
 .homepage main .video h1 {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 4em;
@@ -90,7 +93,7 @@ h2 {
 }
 .homepage main .video video {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -104,6 +107,9 @@ h2 {
 .homepage main section {
   border-bottom: 0;
 }
+.homepage main .news h2 {
+  color: #2B2D42;
+}
 .homepage main .news .cards {
   display: flex;
 }
@@ -113,6 +119,9 @@ h2 {
 }
 .homepage main .streamers {
   margin-top: 50px;
+}
+.homepage main .streamers h2 {
+  color: #2B2D42;
 }
 .homepage main .streamers .list {
   display: flex;

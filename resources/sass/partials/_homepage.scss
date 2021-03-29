@@ -1,7 +1,9 @@
 .homepage {
     background-color: $aliceBlue;
     header {
-        background-color: $manatee;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
         .container {
             display: flex;
             justify-content: space-between;
@@ -26,7 +28,8 @@
                 text-decoration: none;
                 font-weight: 500;
                 font-size: 1.1em;
-                color: $spaceCadet;
+                font-weight: 700;
+                color: white;
             }
         }
     }
@@ -42,7 +45,7 @@
             }
             h1 {
                 position: absolute;
-                top: 30%;
+                top: 40%;
                 left: 50%;
                 transform: translateX(-50%);
                 font-size: 4em;
@@ -52,7 +55,7 @@
             }
             video {
                 width: 100%;
-                height: calc(100vh - 80px);
+                height: 100vh;
                 object-fit: cover;
                 object-position: center;
             }
@@ -66,6 +69,9 @@
             border-bottom: 0;
         }
         .news {
+            h2 {
+                color: $spaceCadet;
+            }
             .cards {
                 display: flex;
                 .card{
@@ -76,6 +82,9 @@
         }
         .streamers{
             margin-top: 50px;
+            h2 {
+                color: $spaceCadet;
+            }
             .list{
                 display: flex;
                 flex-wrap: wrap;
