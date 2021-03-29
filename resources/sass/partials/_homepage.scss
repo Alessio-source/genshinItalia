@@ -31,6 +31,7 @@
         }
     }
     main {
+        padding: 0 0 50px 0;
         .video {
             position: relative;
             .layover {
@@ -59,6 +60,21 @@
                 position: absolute;
                 left: 0;
                 bottom: 0;
+            }
+        }
+        section {
+            border-bottom: 0;
+        }
+        .streamers{
+            display: flex;
+            flex-wrap: wrap;
+            .streammer {
+                width: calc(100% / 3);
+                iframe {
+                    width: calc(100% - 10px);
+                    border: none;
+                    border-radius: 5px;
+                }
             }
         }
     }

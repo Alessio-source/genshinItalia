@@ -22,10 +22,10 @@
     
                 <nav>
                     <ul>
-                        <li><a href="">Prova</a></li>
-                        <li><a href="">Prova</a></li>
-                        <li><a href="">Prova</a></li>
-                        <li><a href="">Prova</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Build</a></li>
+                        <li><a href="">Chi siamo?</a></li>
+                        <li><a href="">Contatti</a></li>
                     </ul>
                 </nav>
             </div>
@@ -46,12 +46,63 @@
             </section>
 
             <div class="container">
-                <h1>Ciao</h1>
+                <section class="news">
+                    <h2>Ultime notizie</h2>
+                    <div class="card">
+                        <p>Prova</p>
+                    </div>
+                </section>
+
+                <h2>Streamer consigliati</h2>
+                <section class="streamers">
+
+                    <div class="streammer">
+                        <iframe
+                            src="https://player.twitch.tv/?channel=zergantis_official&parent=127.0.0.1&muted=true"
+                            allowfullscreen="true">
+                        </iframe>
+                    </div>
+
+                    <div class="streammer">
+                        <iframe
+                            src="https://player.twitch.tv/?channel=ytgiul&parent=127.0.0.1&muted=true"
+                            allowfullscreen="true">
+                        </iframe>
+                    </div>
+
+                    <div class="streammer">
+                        <iframe
+                            src="https://player.twitch.tv/?channel=lothersensei&parent=127.0.0.1&muted=true"
+                            allowfullscreen="true">
+                        </iframe>
+                    </div>
+
+                    <div class="streammer">
+                        <iframe
+                            src="https://player.twitch.tv/?channel=kalandorf&parent=127.0.0.1&muted=true"
+                            allowfullscreen="true">
+                        </iframe>
+                    </div>
+
+                    <div class="streammer">
+                        <iframe
+                            src="https://player.twitch.tv/?channel=kurolily&parent=127.0.0.1&muted=true"
+                            allowfullscreen="true">
+                        </iframe>
+                    </div>
+                    
+                </section>
             </div>
         </main>
 
         <footer>
+            <div class="footer_top">
 
+            </div>
+
+            <div class="footer_bottom">
+
+            </div>
         </footer>
     </body>
 </html>
