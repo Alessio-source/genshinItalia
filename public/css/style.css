@@ -8,6 +8,7 @@
 }
 
 html {
+  height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -68,9 +69,6 @@ h2 {
   font-size: 1.1em;
   font-weight: 700;
   color: white;
-}
-.homepage main {
-  padding: 0 0 50px 0;
 }
 .homepage main .video {
   position: relative;
@@ -137,4 +135,26 @@ h2 {
   height: 100%;
   border: none;
   border-radius: 5px;
+}
+.homepage footer {
+  background-color: #2B2D42;
+  color: #8D99AE;
+}
+.homepage footer .footer_top {
+  display: flex;
+  justify-content: center;
+}
+.homepage footer .footer_top .left,
+.homepage footer .footer_top .right {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.homepage footer .footer_top .left a,
+.homepage footer .footer_top .right a {
+  color: white;
+  text-decoration: none;
+}
+.homepage footer .footer_bottom {
+  text-align: center;
 }
