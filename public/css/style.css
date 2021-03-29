@@ -8,3 +8,20 @@
 body {
   font-family: "Cabin", sans-serif;
 }
+
+.homepage {
+  background-color: #EDF2F4;
+}
+.homepage header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #8D99AE;
+}
+.homepage header nav ul {
+  display: flex;
+  list-style: none;
+}
+.homepage header a {
+  text-decoration: none;
+  color: #2B2D42;
+}

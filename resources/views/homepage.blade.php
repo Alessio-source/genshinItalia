@@ -8,18 +8,24 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
+        <link rel="shortcut icon" href="{{ asset('images/favico.png') }}" type="image/x-icon">
+
         <title>GenshinItalia - Homepage</title>
     </head>
-    <body>
+    <body class="homepage">
         <header>
-            <a href="{{ url('/') }}">Genshin Italia</a>
+            <section class="right">
+                <a href="{{ url('/') }}">Genshin Italia</a>
+            </section>
 
-            <ul>
-                <li><a href="">Prova</a></li>
-                <li><a href="">Prova</a></li>
-                <li><a href="">Prova</a></li>
-                <li><a href="">Prova</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="">Prova</a></li>
+                    <li><a href="">Prova</a></li>
+                    <li><a href="">Prova</a></li>
+                    <li><a href="">Prova</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>

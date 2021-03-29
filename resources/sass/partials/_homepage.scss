@@ -1,0 +1,18 @@
+.homepage {
+    background-color: $aliceBlue;
+    header {
+        display: flex;
+        justify-content: space-between;
+        background-color: $manatee;
+        nav {
+            ul {
+                display: flex;
+                list-style: none;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: $spaceCadet;
+        }
+    }
+}
