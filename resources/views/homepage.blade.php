@@ -48,49 +48,61 @@
             <div class="container">
                 <section class="news">
                     <h2>Ultime notizie</h2>
-                    <div class="card">
-                        <p>Prova</p>
+                    <div class="cards">
+                        <div class="card">
+                            <p>Prova</p>
+                        </div>
+
+                        <div class="card">
+                            <p>Prova</p>
+                        </div>
+
+                        <div class="card">
+                            <p>Prova</p>
+                        </div>
                     </div>
                 </section>
 
-                <h2>Streamer consigliati</h2>
                 <section class="streamers">
+                    <h2>Streamer consigliati</h2>
 
-                    <div class="streammer">
-                        <iframe
-                            src="https://player.twitch.tv/?channel=zergantis_official&parent=127.0.0.1&muted=true"
-                            allowfullscreen="true">
-                        </iframe>
+                    <div class="list">
+                        <div class="streammer">
+                            <iframe
+                                src="https://player.twitch.tv/?channel=zergantis_official&parent=127.0.0.1&muted=true"
+                                allowfullscreen="true">
+                            </iframe>
+                        </div>
+    
+                        <div class="streammer">
+                            <iframe
+                                src="https://player.twitch.tv/?channel=ytgiul&parent=127.0.0.1&muted=true"
+                                allowfullscreen="true">
+                            </iframe>
+                        </div>
+    
+                        <div class="streammer">
+                            <iframe
+                                src="https://player.twitch.tv/?channel=lothersensei&parent=127.0.0.1&muted=true"
+                                allowfullscreen="true">
+                            </iframe>
+                        </div>
+    
+                        <div class="streammer">
+                            <iframe
+                                src="https://player.twitch.tv/?channel=kalandorf&parent=127.0.0.1&muted=true"
+                                allowfullscreen="true">
+                            </iframe>
+                        </div>
+    
+                        <div class="streammer">
+                            <iframe
+                                src="https://player.twitch.tv/?channel=kurolily&parent=127.0.0.1&muted=true"
+                                allowfullscreen="true">
+                            </iframe>
+                        </div>
                     </div>
 
-                    <div class="streammer">
-                        <iframe
-                            src="https://player.twitch.tv/?channel=ytgiul&parent=127.0.0.1&muted=true"
-                            allowfullscreen="true">
-                        </iframe>
-                    </div>
-
-                    <div class="streammer">
-                        <iframe
-                            src="https://player.twitch.tv/?channel=lothersensei&parent=127.0.0.1&muted=true"
-                            allowfullscreen="true">
-                        </iframe>
-                    </div>
-
-                    <div class="streammer">
-                        <iframe
-                            src="https://player.twitch.tv/?channel=kalandorf&parent=127.0.0.1&muted=true"
-                            allowfullscreen="true">
-                        </iframe>
-                    </div>
-
-                    <div class="streammer">
-                        <iframe
-                            src="https://player.twitch.tv/?channel=kurolily&parent=127.0.0.1&muted=true"
-                            allowfullscreen="true">
-                        </iframe>
-                    </div>
-                    
                 </section>
             </div>
         </main>

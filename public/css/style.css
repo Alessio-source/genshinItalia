@@ -7,9 +7,34 @@
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h2 {
   font-size: 2.5em;
   font-weight: 600;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #2B2D42;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #EF233C;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #D90429;
 }
 
 .homepage {
@@ -51,7 +76,7 @@ h2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .homepage main .video h1 {
   position: absolute;
@@ -79,15 +104,28 @@ h2 {
 .homepage main section {
   border-bottom: 0;
 }
+.homepage main .news .cards {
+  display: flex;
+}
+.homepage main .news .cards .card {
+  width: calc(100% / 3 - 10px);
+  margin: 0 5px;
+}
 .homepage main .streamers {
+  margin-top: 50px;
+}
+.homepage main .streamers .list {
   display: flex;
   flex-wrap: wrap;
 }
-.homepage main .streamers .streammer {
-  width: calc(100% / 3);
+.homepage main .streamers .list .streammer {
+  width: calc(100% / 3 - 10px);
+  height: 200px;
+  margin: 5px 5px;
 }
-.homepage main .streamers .streammer iframe {
-  width: calc(100% - 10px);
+.homepage main .streamers .list .streammer iframe {
+  width: 100%;
+  height: 100%;
   border: none;
   border-radius: 5px;
 }
