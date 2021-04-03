@@ -13,7 +13,7 @@
     <li class="item"><a href="{{ url('/') }}">Homepage</a></li>
     <li class="item"><a href="{{ route('dashboard.index') }}">User</a></li>
     <li class="item"><a href="{{ route('dashboard.news.index') }}">News</a></li>
-    <li class="item"><a href="">Personaggi</a></li>
+    <li class="item"><a href="{{ route('dashboard.characters.index') }}">Personaggi</a></li>
     <li class="item"><a href="">Links</a></li>
 @endsection
 

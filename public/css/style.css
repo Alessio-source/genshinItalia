@@ -268,6 +268,12 @@ h2 {
   margin: 0;
 }
 .news_index main .content .cards .card img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   margin: 10px 0;
 }
 
@@ -346,4 +352,89 @@ h2 {
   margin-top: 10px;
   width: 150px;
   border-radius: 5px;
+}
+
+.characters_index main .content .cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.characters_index main .content .cards .card {
+  width: calc(100% / 5 - 10px);
+  padding: 10px 0;
+  margin: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #2B2D42;
+  color: white;
+}
+.characters_index main .content .cards .card div {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.characters_index main .content .cards .card div a {
+  display: inline-block;
+  margin-left: 5px;
+  color: white;
+}
+.characters_index main .content .cards .card div .fa-pen-square {
+  font-size: 30px;
+}
+.characters_index main .content .cards .card div form {
+  margin-left: 5px;
+  padding: 1px;
+}
+.characters_index main .content .cards .card div form button {
+  border: none;
+  padding: 1px 8px;
+  border-radius: 2px;
+  color: #2B2D42;
+}
+.characters_index main .content .cards .card p, .characters_index main .content .cards .card h3 {
+  margin: 0;
+}
+.characters_index main .content .cards .card img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin: 10px 0;
+}
+
+.characters_create main .content form {
+  display: flex;
+  flex-direction: column;
+}
+.characters_create main .content form input[type=text] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #2B2D42;
+  color: white;
+  border-radius: 5px;
+}
+.characters_create main .content form input[type=text]::-moz-placeholder {
+  color: white;
+}
+.characters_create main .content form input[type=text]:-ms-input-placeholder {
+  color: white;
+}
+.characters_create main .content form input[type=text]::placeholder {
+  color: white;
+}
+.characters_create main .content form label {
+  margin-top: 20px;
+}
+.characters_create main .content form input[type=submit],
+.characters_create main .content form a {
+  font-weight: 700;
+  background-color: #D90429;
+  color: #EDF2F4;
+}
+.characters_create main .content form .buttons {
+  margin-top: 20px;
 }

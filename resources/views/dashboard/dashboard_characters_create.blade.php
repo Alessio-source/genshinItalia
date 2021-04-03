@@ -1,11 +1,11 @@
 @extends('dashboard.layout')
 
 @section('page_name')
-    Creazione News
+    Aggiunta personaggio
 @endsection
 
 @section('page_class')
-    news_create
+    characters_create
 @endsection
 
 @section('aside_links')
@@ -29,23 +29,21 @@
     </div>
     @endif
 
-    <form action="{{ route('dashboard.news.store') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('dashboard.characters.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('POST')
-        <h1>Creazione News</h1>
 
-        <label for="title">Inserisci un titolo: </label>
-        <input type="text" placeholder="Titolo" name="title" id="title" required>
+        <h1>Aggiunta personaggio</h1>
 
-        <label for="text">Inserisci il testo della news: </label>
-        <textarea name="text" id="text" rows="10" placeholder="Inserisci il testo della news" required></textarea>
+        <label for="name">Inserisci il nome: </label>
+        <input type="text" id="name" name="name" placeholder="Nome" required>
 
         <label for="img_path">Inserisci una immagine: </label>
         <input type="file" name="img_path" id="image" accept="images/*" required>
 
         <div class="buttons">
-            <input type="submit" value="Crea" class="btn">
-            <a href="{{ route('dashboard.news.index') }}" class="btn">Torna indietro</a>
+            <input type="submit" value="Aggiungi" class="btn">
+            <a href="{{ route('dashboard.characters.index') }}" class="btn">Torna indietro</a>
         </div>
     </form>
 @endsection
