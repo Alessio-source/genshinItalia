@@ -20,3 +20,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::prefix('dashboard')
+    ->middleware('auth')
+    ->name('dashboard.')
+    ->group( function () {
+
+        Route::get('/', 'DashboardController@index')->name('dashboard');
+        Route::resource('/dashboard/news', 'NewsController');
+
+    });
+

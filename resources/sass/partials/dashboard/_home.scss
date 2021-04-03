@@ -1,0 +1,34 @@
+.home {
+    main {
+        display: flex;
+        .aside {
+            width: 30%;
+            height: 100vh;
+            padding: 15px;
+            background-color: $manatee;
+            h2 {
+                margin-bottom: 20px;
+                color: $spaceCadet;
+            }
+            .menu {
+                list-style: none;
+                .item {
+                    margin-bottom: 10px;
+                    a {
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        background-color: $aliceBlue;
+                        text-decoration: none;
+                        color: $spaceCadet;
+                    }
+                }
+            }
+        }
+        .content {
+            width: 70%;
+            height: 100vh;
+            padding: 15px;
+            background-color: $aliceBlue;
+        }
+    }
+}

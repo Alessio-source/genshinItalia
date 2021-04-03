@@ -158,3 +158,36 @@ h2 {
 .homepage footer .footer_bottom {
   text-align: center;
 }
+
+.home main {
+  display: flex;
+}
+.home main .aside {
+  width: 30%;
+  height: 100vh;
+  padding: 15px;
+  background-color: #8D99AE;
+}
+.home main .aside h2 {
+  margin-bottom: 20px;
+  color: #2B2D42;
+}
+.home main .aside .menu {
+  list-style: none;
+}
+.home main .aside .menu .item {
+  margin-bottom: 10px;
+}
+.home main .aside .menu .item a {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #EDF2F4;
+  text-decoration: none;
+  color: #2B2D42;
+}
+.home main .content {
+  width: 70%;
+  height: 100vh;
+  padding: 15px;
+  background-color: #EDF2F4;
+}
