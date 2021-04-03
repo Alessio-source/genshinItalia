@@ -114,6 +114,36 @@ h2 {
 .homepage main .news .cards .card {
   width: calc(100% / 3 - 10px);
   margin: 0 5px;
+  text-align: center;
+  border: none;
+  background-color: #8D99AE;
+}
+.homepage main .news .cards .card a {
+  text-decoration: none;
+  color: #EDF2F4;
+}
+.homepage main .news .cards .card a h3 {
+  margin: 10px;
+}
+.homepage main .news .cards .card a p {
+  margin: 10px;
+}
+.homepage main .news .cards .card a .img_container {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.homepage main .news .cards .card a .img_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: all 0.2s;
+}
+.homepage main .news .cards .card a:hover img {
+  transform: scale(1.2);
 }
 .homepage main .streamers {
   margin-top: 50px;

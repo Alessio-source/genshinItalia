@@ -55,7 +55,15 @@
                         @foreach ($news as $key => $item)
                             @if($key > $news->count() - 4)
                                 <div class="card">
-                                    <p>{{ $item->title }}</p>
+                                    <a href="">
+                                        <h3>- {{ $item->title }} -</h3>
+    
+                                        <div class="img_container">
+                                            <img src="{{ asset('storage/' . $item->img_path) }}" alt="{{ $item->title }}">
+                                        </div>
+    
+                                        <p>{{ $item->text }}</p>
+                                    </a>
                                 </div>
                             @endif
                         @endforeach

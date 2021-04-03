@@ -76,6 +76,36 @@
                 .card{
                     width: calc(100% / 3 - 10px);
                     margin: 0 5px;
+                    text-align: center;
+                    border: none;
+                    background-color: $manatee;
+                    a {
+                        text-decoration: none;
+                        color: $aliceBlue;
+                        h3 {
+                            margin: 10px;
+                        }
+                        p {
+                            margin: 10px;
+                        }
+                        .img_container {
+                            width: 100%;
+                            height: 150px;
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                                transition: all 0.2s;
+                            }
+                        }
+                        &:hover {
+                            img {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
                 }
             }
         }
