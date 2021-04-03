@@ -26,6 +26,9 @@
                         <li><a href="">Build</a></li>
                         <li><a href="">Chi siamo?</a></li>
                         <li><a href="">Contatti</a></li>
+                        @auth
+                        <li><a href="{{ route('dashboard.index') }}">Pannello di controllo</a></li>
+                        @endauth
                     </ul>
                 </nav>
             </div>

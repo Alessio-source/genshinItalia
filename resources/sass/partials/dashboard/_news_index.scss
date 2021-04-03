@@ -13,6 +13,30 @@
                     border-radius: 5px;
                     background-color: $spaceCadet;
                     color: white;
+                    div {
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        a {
+                            display: inline-block;
+                            margin-left: 5px;
+                            color: white;
+                        }
+                        .fa-pen-square {
+                            font-size: 30px;
+                        }
+                        form {
+                            margin-left: 5px;
+                            padding: 1px;
+                            button {
+                                border: none;
+                                padding: 1px 8px;
+                                border-radius: 2px;
+                                color: $spaceCadet;
+                            }
+                        }
+                    }
                     p,h3 {
                         margin: 0;
                     }

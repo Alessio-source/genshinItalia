@@ -1,5 +1,9 @@
 @extends('dashboard.layout')
 
+@section('styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+@endsection
+
 @section('page_name')
     News
 @endsection
@@ -32,6 +36,14 @@
             <h3>{{ $news->title }}</h3>
             <img src="{{ asset('storage/' . $news->img_path) }}" alt="">
             <p>{{ $news->text }}</p>
+            <div>
+                <a href="{{ route('dashboard.news.edit', $news->id) }}"><i class="fas fa-pen-square"></i></a>
+                <form action="{{ route('dashboard.news.destroy', $news->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" ><i class="fas fa-trash-alt"></i></button>
+                </form>
+            </div>
         </div>
         @endforeach
     </div>

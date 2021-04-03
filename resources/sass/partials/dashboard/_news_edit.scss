@@ -1,0 +1,39 @@
+.news_edit {
+    main {
+        .content {
+            form {
+                display: flex;
+                flex-direction: column;
+                input[type="text"],
+                textarea {
+                    padding: 10px;
+                    border: none;
+                    outline: none;
+                    background-color: $spaceCadet;
+                    color: white;
+                    border-radius: 5px;
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+                label {
+                    margin-top: 20px;
+                }
+                input[type="submit"],
+                a {
+                    font-weight: 700;
+                    background-color: $amaranthRed;
+                    color: $aliceBlue;
+                }
+                .buttons {
+                    margin-top: 20px;
+                }
+                img {
+                    margin-top: 10px;
+                    width: 150px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

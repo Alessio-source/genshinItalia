@@ -210,6 +210,30 @@ h2 {
   background-color: #2B2D42;
   color: white;
 }
+.news_index main .content .cards .card div {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.news_index main .content .cards .card div a {
+  display: inline-block;
+  margin-left: 5px;
+  color: white;
+}
+.news_index main .content .cards .card div .fa-pen-square {
+  font-size: 30px;
+}
+.news_index main .content .cards .card div form {
+  margin-left: 5px;
+  padding: 1px;
+}
+.news_index main .content .cards .card div form button {
+  border: none;
+  padding: 1px 8px;
+  border-radius: 2px;
+  color: #2B2D42;
+}
 .news_index main .content .cards .card p, .news_index main .content .cards .card h3 {
   margin: 0;
 }
@@ -251,4 +275,45 @@ h2 {
 }
 .news_create main .content form .buttons {
   margin-top: 20px;
+}
+
+.news_edit main .content form {
+  display: flex;
+  flex-direction: column;
+}
+.news_edit main .content form input[type=text],
+.news_edit main .content form textarea {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #2B2D42;
+  color: white;
+  border-radius: 5px;
+}
+.news_edit main .content form input[type=text]::-moz-placeholder, .news_edit main .content form textarea::-moz-placeholder {
+  color: white;
+}
+.news_edit main .content form input[type=text]:-ms-input-placeholder, .news_edit main .content form textarea:-ms-input-placeholder {
+  color: white;
+}
+.news_edit main .content form input[type=text]::placeholder,
+.news_edit main .content form textarea::placeholder {
+  color: white;
+}
+.news_edit main .content form label {
+  margin-top: 20px;
+}
+.news_edit main .content form input[type=submit],
+.news_edit main .content form a {
+  font-weight: 700;
+  background-color: #D90429;
+  color: #EDF2F4;
+}
+.news_edit main .content form .buttons {
+  margin-top: 20px;
+}
+.news_edit main .content form img {
+  margin-top: 10px;
+  width: 150px;
+  border-radius: 5px;
 }

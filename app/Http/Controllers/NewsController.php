@@ -10,6 +10,11 @@ use App\news;
 
 class NewsController extends Controller
 {
+    private $dataValidate = [
+        'title' => 'required|max:255',
+        'text' => 'required',
+        'img_path' => 'required|mimes:jpeg,png,jpg,gif,svg|image'
+    ];
     /**
      * Display a listing of the resource.
      *
@@ -40,6 +45,10 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate(
+            $this->dataValidate
+        );
 
         $data = $request->all();
 
@@ -72,9 +81,10 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(News $news)
     {
-        //
+        $user = User::where('id', Auth::id())->first();
+        return view('dashboard/dashboard_news_edit', compact('news', 'user'));
     }
 
     /**
@@ -84,9 +94,31 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, News $news)
     {
-        //
+        $data = $request->all();
+
+        if(empty($data['img_path'])){
+            $data['img_path'] = $news->img_path;
+
+            $request->validate([
+                'title' => 'required|max:255',
+                'text' => 'required'
+            ]);
+        } else {
+            $data['img_path'] = Storage::disk('public')->put('images', $data['img_path']);
+
+            $request->validate(
+                $this->dataValidate
+            );
+        }
+
+        
+
+        $news->fill($data);
+        $news->update();
+
+        return redirect()->route('dashboard.news.index')->with('Message', 'Articolo ' . $data['title'] . " modificato correttamente!");
     }
 
     /**
@@ -95,8 +127,9 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(News $news)
     {
-        //
+        $news->delete();
+        return redirect()->route('dashboard.news.index')->with('Message', 'Articolo cancellato correttamente!');
     }
 }
