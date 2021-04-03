@@ -52,17 +52,13 @@
                 <section class="news">
                     <h2>Ultime notizie</h2>
                     <div class="cards">
-                        <div class="card">
-                            <p>Prova</p>
-                        </div>
-
-                        <div class="card">
-                            <p>Prova</p>
-                        </div>
-
-                        <div class="card">
-                            <p>Prova</p>
-                        </div>
+                        @foreach ($news as $key => $item)
+                            @if($key > $news->count() - 4)
+                                <div class="card">
+                                    <p>{{ $item->title }}</p>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
                 </section>
 
