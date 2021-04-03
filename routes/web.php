@@ -28,7 +28,7 @@ Route::prefix('dashboard')
     ->name('dashboard.')
     ->group( function () {
 
-        Route::get('/', 'DashboardController@index')->name('dashboard');
+        Route::get('/', 'DashboardController@index')->name('index');
         Route::resource('/dashboard/news', 'NewsController');
 
     });

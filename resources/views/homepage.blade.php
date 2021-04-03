@@ -126,7 +126,7 @@
             </div>
 
             <div class="footer_bottom">
-                <p>&copy; Genshin Italia - 2021</p>
+                <p>&copy; Genshin Italia - @php echo date("Y") @endphp</p>
             </div>
         </footer>
     </body>

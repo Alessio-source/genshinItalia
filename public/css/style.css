@@ -159,35 +159,96 @@ h2 {
   text-align: center;
 }
 
-.home main {
+.dashboard main {
   display: flex;
 }
-.home main .aside {
-  width: 30%;
+.dashboard main .aside {
+  width: 20%;
   height: 100vh;
   padding: 15px;
   background-color: #8D99AE;
 }
-.home main .aside h2 {
+.dashboard main .aside h2 {
   margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
   color: #2B2D42;
 }
-.home main .aside .menu {
+.dashboard main .aside .menu {
   list-style: none;
 }
-.home main .aside .menu .item {
+.dashboard main .aside .menu .item {
   margin-bottom: 10px;
 }
-.home main .aside .menu .item a {
+.dashboard main .aside .menu .item a {
+  display: block;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #EDF2F4;
   text-decoration: none;
+  text-align: center;
+  background-color: #EDF2F4;
   color: #2B2D42;
 }
-.home main .content {
-  width: 70%;
+.dashboard main .content {
+  width: 80%;
   height: 100vh;
   padding: 15px;
   background-color: #EDF2F4;
+}
+
+.news_index main .content .cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.news_index main .content .cards .card {
+  width: calc(100% / 5 - 10px);
+  padding: 10px 0;
+  margin: 5px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #2B2D42;
+  color: white;
+}
+.news_index main .content .cards .card p, .news_index main .content .cards .card h3 {
+  margin: 0;
+}
+.news_index main .content .cards .card img {
+  margin: 10px 0;
+}
+
+.news_create main .content form {
+  display: flex;
+  flex-direction: column;
+}
+.news_create main .content form input[type=text],
+.news_create main .content form textarea {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #2B2D42;
+  color: white;
+  border-radius: 5px;
+}
+.news_create main .content form input[type=text]::-moz-placeholder, .news_create main .content form textarea::-moz-placeholder {
+  color: white;
+}
+.news_create main .content form input[type=text]:-ms-input-placeholder, .news_create main .content form textarea:-ms-input-placeholder {
+  color: white;
+}
+.news_create main .content form input[type=text]::placeholder,
+.news_create main .content form textarea::placeholder {
+  color: white;
+}
+.news_create main .content form label {
+  margin-top: 20px;
+}
+.news_create main .content form input[type=submit],
+.news_create main .content form a {
+  font-weight: 700;
+  background-color: #D90429;
+  color: #EDF2F4;
+}
+.news_create main .content form .buttons {
+  margin-top: 20px;
 }

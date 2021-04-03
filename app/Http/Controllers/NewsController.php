@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use App\User;
+use App\news;
 
 class NewsController extends Controller
 {
@@ -13,7 +17,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::where('id', Auth::id())->first();
+        return view('dashboard/dashboard_news_index', compact('user') );
     }
 
     /**
@@ -23,7 +28,8 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        $user = User::where('id', Auth::id())->first();
+        return view('dashboard/dashboard_news_create', compact('user'));
     }
 
     /**
@@ -34,7 +40,19 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $data = $request->all();
+
+        $data['user_id'] = Auth::id();
+
+        $data['img_path'] = Storage::disk('public')->put('images', $data['img_path']);
+
+        $news = new News();
+        $news->fill($data);
+        $news->save();
+
+        return redirect()->route('dashboard.news.index')->with('Message', 'Articolo ' . $data['title'] . " Creato correttamente!");
+
     }
 
     /**

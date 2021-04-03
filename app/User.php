@@ -38,6 +38,6 @@ class User extends Authenticatable
     ];
 
     function news() {
-        return $this->toMany('App\news');
+        return $this->hasMany('App\news');
     }
 }

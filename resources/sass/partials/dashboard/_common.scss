@@ -1,13 +1,15 @@
-.home {
+.dashboard {
     main {
         display: flex;
         .aside {
-            width: 30%;
+            width: 20%;
             height: 100vh;
             padding: 15px;
             background-color: $manatee;
             h2 {
                 margin-bottom: 20px;
+                text-align: center;
+                font-size: 22px;
                 color: $spaceCadet;
             }
             .menu {
@@ -15,17 +17,19 @@
                 .item {
                     margin-bottom: 10px;
                     a {
+                        display: block;
                         padding: 5px 10px;
                         border-radius: 5px;
-                        background-color: $aliceBlue;
                         text-decoration: none;
+                        text-align: center;
+                        background-color: $aliceBlue;
                         color: $spaceCadet;
                     }
                 }
             }
         }
         .content {
-            width: 70%;
+            width: 80%;
             height: 100vh;
             padding: 15px;
             background-color: $aliceBlue;
