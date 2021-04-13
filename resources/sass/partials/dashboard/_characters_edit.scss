@@ -1,0 +1,36 @@
+.characters_edit {
+    main {
+        .content {
+            form {
+                display: flex;
+                flex-direction: column;
+                input[type="text"] {
+                    padding: 10px;
+                    border: none;
+                    outline: none;
+                    background-color: $spaceCadet;
+                    color: white;
+                    border-radius: 5px;
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+                img {
+                    width: 150px;
+                }
+                label {
+                    margin-top: 20px;
+                }
+                input[type="submit"],
+                a {
+                    font-weight: 700;
+                    background-color: $amaranthRed;
+                    color: $aliceBlue;
+                }
+                .buttons {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

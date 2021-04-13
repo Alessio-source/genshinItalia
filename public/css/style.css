@@ -400,8 +400,8 @@ h2 {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top;
+     object-position: top;
   margin: 10px 0;
 }
 
@@ -437,4 +437,88 @@ h2 {
 }
 .characters_create main .content form .buttons {
   margin-top: 20px;
+}
+
+.characters_edit main .content form {
+  display: flex;
+  flex-direction: column;
+}
+.characters_edit main .content form input[type=text] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #2B2D42;
+  color: white;
+  border-radius: 5px;
+}
+.characters_edit main .content form input[type=text]::-moz-placeholder {
+  color: white;
+}
+.characters_edit main .content form input[type=text]:-ms-input-placeholder {
+  color: white;
+}
+.characters_edit main .content form input[type=text]::placeholder {
+  color: white;
+}
+.characters_edit main .content form img {
+  width: 150px;
+}
+.characters_edit main .content form label {
+  margin-top: 20px;
+}
+.characters_edit main .content form input[type=submit],
+.characters_edit main .content form a {
+  font-weight: 700;
+  background-color: #D90429;
+  color: #EDF2F4;
+}
+.characters_edit main .content form .buttons {
+  margin-top: 20px;
+}
+
+.build_index main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://wallpaperaccess.com/full/3628936.jpg");
+  background-size: cover;
+}
+.build_index main .cards {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #8D99AE;
+}
+.build_index main .cards .card {
+  display: inline-block;
+  text-align: center;
+  background-color: #EDF2F4;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  width: 100px;
+}
+.build_index main .cards .card:hover {
+  cursor: pointer;
+}
+.build_index main .cards .card:hover .container_img img {
+  transform: scale(1.2);
+}
+.build_index main .cards .card .container_img {
+  background: linear-gradient(180deg, #020024 0%, #8b5b3d 0%, #b37130 39%);
+  border-radius: 0 0 13px 0;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.build_index main .cards .card .container_img img {
+  margin-bottom: -6px;
+  width: 100%;
+  transition: all 0.2s;
 }

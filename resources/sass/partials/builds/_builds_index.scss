@@ -1,0 +1,51 @@
+.build_index {
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://wallpaperaccess.com/full/3628936.jpg');
+        background-size: cover;
+        .cards {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 50px;
+            border-radius: 10px;
+            background-color: $manatee;
+            .card {
+                display: inline-block;
+                text-align: center;
+                background-color: $aliceBlue;
+                border-radius: 5px; 
+                padding-bottom: 5px;
+                overflow: hidden;
+                width: 100px;
+                &:hover {
+                    cursor: pointer;
+                    .container_img {
+                        img {
+                            transform: scale(1.2);
+                        }
+                    }
+
+                }
+                .container_img {
+                    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(139,91,61,1) 0%, rgba(179,113,48,1) 39%);
+                    border-radius: 0 0 13px 0;
+                    overflow: hidden;
+                    margin-bottom: 5px;
+                    img {
+                        margin-bottom: -6px;
+                        width: 100%;
+                        transition: all 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -75,9 +75,10 @@ class CharactersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Characters $character)
     {
-        //
+        $user = User::where('id', Auth::id())->first();
+        return view('dashboard/dashboard_characters_edit', compact('character', 'user'));
     }
 
     /**
@@ -87,9 +88,26 @@ class CharactersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Characters $character)
     {
-        //
+        $data = $request->all();
+
+        if(empty($data["img_path"])) {
+            $data["img_path"] = $character->img_path;
+            
+            $request->validate([
+                'name' => 'required|max:255'
+            ]);
+        } else {
+            $data['img_path'] = Storage::disk('public')->put('images', $data['img_path']);
+            $request->validate( $this->validateData );
+        }
+
+        $character->fill($data);
+        $character->update();
+
+        return redirect()->route('dashboard.characters.index')->with('Message', 'Personaggio ' . $data['name'] . " modificato correttamente!");
+
     }
 
     /**

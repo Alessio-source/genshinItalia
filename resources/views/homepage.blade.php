@@ -23,7 +23,7 @@
                 <nav>
                     <ul>
                         <li><a href="">News</a></li>
-                        <li><a href="">Build</a></li>
+                        <li><a href="{{ route('build.index') }}">Build</a></li>
                         <li><a href="">Chi siamo?</a></li>
                         <li><a href="">Contatti</a></li>
                         @auth
@@ -126,7 +126,7 @@
                 <div class="right">
                     <h5>Link Utili</h5>
                     <a href="">News</a>
-                    <a href="">Build</a>
+                    <a href="{{ route('build.index') }}">Build</a>
                     <a href="">Chi siamo?</a>
                     <a href="">Contatti</a>
                 </div>

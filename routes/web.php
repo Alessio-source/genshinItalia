@@ -22,7 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::resource('build', 'BuildController');
 
 
 Route::prefix('dashboard')
