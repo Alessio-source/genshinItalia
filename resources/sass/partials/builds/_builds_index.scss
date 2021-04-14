@@ -15,8 +15,9 @@
             align-items: flex-start;
             flex-wrap: wrap;
             padding: 50px;
+            margin-top: 50px;
             border-radius: 10px;
-            background-color: $manatee;
+            background-color: #ddd;
             .card {
                 display: inline-block;
                 text-align: center;
@@ -44,6 +45,9 @@
                         width: 100%;
                         transition: all 0.2s;
                     }
+                }
+                p {
+                    margin: 0;
                 }
             }
         }

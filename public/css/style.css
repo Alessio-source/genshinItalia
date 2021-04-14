@@ -38,37 +38,38 @@ h2 {
   background: #D90429;
 }
 
-.homepage {
-  background-color: #EDF2F4;
-}
-.homepage header {
+header {
   position: absolute;
   width: 100%;
   z-index: 2;
 }
-.homepage header .container {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
 }
-.homepage header .container .right img {
+header .container .right img {
   height: 50px;
 }
-.homepage header .container nav ul {
+header .container nav ul {
   display: flex;
   list-style: none;
   margin-bottom: 0;
 }
-.homepage header .container nav ul li {
+header .container nav ul li {
   margin-left: 10px;
 }
-.homepage header .container a {
+header .container a {
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1em;
   font-weight: 700;
   color: white;
+}
+
+.homepage {
+  background-color: #EDF2F4;
 }
 .homepage main .video {
   position: relative;
@@ -493,8 +494,9 @@ h2 {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 50px;
+  margin-top: 50px;
   border-radius: 10px;
-  background-color: #8D99AE;
+  background-color: #ddd;
 }
 .build_index main .cards .card {
   display: inline-block;
@@ -521,4 +523,7 @@ h2 {
   margin-bottom: -6px;
   width: 100%;
   transition: all 0.2s;
+}
+.build_index main .cards .card p {
+  margin: 0;
 }
