@@ -68,19 +68,19 @@ header .container a {
   color: white;
 }
 
-.homepage {
+.layout {
   background-color: #EDF2F4;
 }
-.homepage main .video {
+.layout main .video {
   position: relative;
 }
-.homepage main .video .layover {
+.layout main .video .layover {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.homepage main .video h1 {
+.layout main .video h1 {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -90,7 +90,7 @@ header .container a {
   color: white;
   z-index: 1;
 }
-.homepage main .video video {
+.layout main .video video {
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
@@ -98,11 +98,34 @@ header .container a {
   -o-object-position: center;
      object-position: center;
 }
-.homepage main .video svg {
+.layout main .video svg {
   position: absolute;
   left: 0;
   bottom: 0;
 }
+.layout footer {
+  background-color: #2B2D42;
+  color: #8D99AE;
+}
+.layout footer .footer_top {
+  display: flex;
+  justify-content: center;
+}
+.layout footer .footer_top .left,
+.layout footer .footer_top .right {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.layout footer .footer_top .left a,
+.layout footer .footer_top .right a {
+  color: white;
+  text-decoration: none;
+}
+.layout footer .footer_bottom {
+  text-align: center;
+}
+
 .homepage main section {
   border-bottom: 0;
 }
@@ -166,28 +189,6 @@ header .container a {
   height: 100%;
   border: none;
   border-radius: 5px;
-}
-.homepage footer {
-  background-color: #2B2D42;
-  color: #8D99AE;
-}
-.homepage footer .footer_top {
-  display: flex;
-  justify-content: center;
-}
-.homepage footer .footer_top .left,
-.homepage footer .footer_top .right {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-}
-.homepage footer .footer_top .left a,
-.homepage footer .footer_top .right a {
-  color: white;
-  text-decoration: none;
-}
-.homepage footer .footer_bottom {
-  text-align: center;
 }
 
 .dashboard main {
@@ -477,77 +478,37 @@ header .container a {
   margin-top: 20px;
 }
 
-.build_index {
-  background-image: url("https://wallpaperaccess.com/full/3628936.jpg");
-  background-size: cover;
-}
-.build_index .layover {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.build_index main {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.build_index main .cards {
-  width: 100%;
-  height: 80%;
-  position: relative;
-  z-index: 1;
+.build_index .cards {
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
-  padding: 50px;
-  margin-top: 50px;
-  border-radius: 10px;
-  background-color: #ddd;
-  overflow-y: auto;
 }
-.build_index main .cards .card {
-  width: 100px;
-  display: inline-block;
-  padding-bottom: 5px;
-  margin: 10px;
-  border-radius: 5px;
-  text-align: center;
-  background-color: #EDF2F4;
-  overflow: hidden;
+.build_index .cards .card {
+  width: 95px;
   border: none;
-}
-.build_index main .cards .card a {
-  color: #2B2D42;
-  text-decoration: none;
-}
-.build_index main .cards .card:hover {
-  cursor: pointer;
-}
-.build_index main .cards .card:hover .container_img img {
-  transform: scale(1.2);
-}
-.build_index main .cards .card .legendary {
-  background: linear-gradient(180deg, #020024 0%, #8b5b3d 0%, #b37130 39%);
-}
-.build_index main .cards .card .epic {
-  background: linear-gradient(180deg, #020024 0%, #605891 0%, #7c6ba0 39%);
-}
-.build_index main .cards .card .container_img {
-  border-radius: 0 0 13px 0;
   overflow: hidden;
-  margin-bottom: 5px;
+  margin: 10px;
 }
-.build_index main .cards .card .container_img img {
-  margin-bottom: -6px;
+.build_index .cards .card a {
+  text-align: center;
+  text-decoration: none;
+  color: #2B2D42;
+}
+.build_index .cards .card a .container_img {
+  border-radius: 0 0 12px 0;
+  overflow: hidden;
+}
+.build_index .cards .card a .container_img img {
   width: 100%;
   transition: all 0.2s;
 }
-.build_index main .cards .card p {
-  margin: 0;
+.build_index .cards .card a:hover .container_img img {
+  transform: scale(1.2);
+}
+.build_index .cards .legendary {
+  background: linear-gradient(180deg, #020024 0%, #8b5b3d 0%, #b37130 39%);
+}
+.build_index .cards .epic {
+  background: linear-gradient(180deg, #020024 0%, #605891 0%, #7c6ba0 39%);
 }

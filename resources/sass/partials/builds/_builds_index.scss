@@ -1,77 +1,42 @@
 .build_index {
-    background-image: url('https://wallpaperaccess.com/full/3628936.jpg');
-    background-size: cover;
-    .layover {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0 ,0.3);
-    }
-    main {
-        width: 100%;
-        height: 100vh;
+    .cards {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        .cards {
-            width: 100%;
-            height: 80%;
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: flex-start;
-            align-content: flex-start;
-            flex-wrap: wrap;
-            padding: 50px;
-            margin-top: 50px;
-            border-radius: 10px;
-            background-color: #ddd;
-            overflow-y: auto;
-            .card {
-                width: 100px;
-                display: inline-block;
-                padding-bottom: 5px;
-                margin: 10px;
-                border-radius: 5px; 
+        justify-content: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        .card {
+            width: 95px;
+            border: none;
+            overflow: hidden;
+            margin: 10px;
+            a {
                 text-align: center;
-                background-color: $aliceBlue;
-                overflow: hidden;
-                border: none;
-                a {
-                    color: $spaceCadet;
-                    text-decoration: none;
+                text-decoration: none;
+                color: $spaceCadet;
+                .container_img {
+                    border-radius: 0 0 12px 0;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        transition: all 0.2s;
+                    }
                 }
                 &:hover {
-                    cursor: pointer;
                     .container_img {
                         img {
                             transform: scale(1.2);
                         }
                     }
-
-                }
-                .legendary {
-                    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(139,91,61,1) 0%, rgba(179,113,48,1) 39%);
-                }
-                .epic {
-                    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(96,88,145,1) 0%, rgba(124,107,160,1) 39%);
-                }
-                .container_img {
-                    border-radius: 0 0 13px 0;
-                    overflow: hidden;
-                    margin-bottom: 5px;
-                    img {
-                        margin-bottom: -6px;
-                        width: 100%;
-                        transition: all 0.2s;
-                    }
-                }
-                p {
-                    margin: 0;
                 }
             }
         }
+
+        .legendary {
+            background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(139,91,61,1) 0%, rgba(179,113,48,1) 39%);
+        }
+        .epic {
+            background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(96,88,145,1) 0%, rgba(124,107,160,1) 39%);
+        }
     }
+    
 }
