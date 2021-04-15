@@ -125,6 +125,26 @@ header .container a {
 .layout footer .footer_bottom {
   text-align: center;
 }
+.layout .hidden {
+  display: none;
+}
+.layout .go-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 5px;
+  background-color: #EF233C;
+  color: #2B2D42;
+  cursor: pointer;
+}
+.layout .go-top i {
+  font-size: 25px;
+}
 
 .homepage main section {
   border-bottom: 0;

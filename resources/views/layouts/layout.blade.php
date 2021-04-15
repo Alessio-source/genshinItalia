@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         @yield('styles')
@@ -69,6 +70,11 @@
             </div>
         </footer>
 
+        <div id="button-top" onclick="goTop()" title="Torna su">
+            <i class="fas fa-angle-double-up"></i>
+        </div>
+
         @yield('scripts')
+        <script src="{{ asset('js/topButton.js')}}"></script>
     </body>
 </html>
