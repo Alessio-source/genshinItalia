@@ -54,10 +54,10 @@ class CharactersController extends Controller
         $data['user_id'] = Auth::id();
         $data['img_path'] = Storage::disk('public')->put('images', $data['img_path']);
 
-        $characher = new Characters;
-        $characher->fill($data);
-        $characher->save();
-        return redirect()->route('dashboard.characters.index')->with('Message', "Personaggio " . $data['name'] . " aggiunto con successo");
+        $character = new Characters;
+        $character->fill($data);
+        $character->save();
+        return redirect()->route('dashboard.info.create', $character->id);
     }
 
     /**

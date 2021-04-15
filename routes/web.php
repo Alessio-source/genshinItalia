@@ -33,6 +33,7 @@ Route::prefix('dashboard')
         Route::get('/', 'DashboardController@index')->name('index');
         Route::resource('news', 'NewsController');
         Route::resource('characters', 'CharactersController');
+        Route::resource('characters/info', 'CharactersController');
 
     });
 
