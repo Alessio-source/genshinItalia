@@ -42,7 +42,7 @@
         <input type="file" name="img_path" id="image" accept="images/*" required>
 
         <div class="check">
-            <label for="legendary">Legendario: </label>
+            <label for="legendary">Leggendario: </label>
             <input type="checkbox" name="legendary" id="legendary" value="1">
         </div>
 

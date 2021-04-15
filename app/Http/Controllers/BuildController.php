@@ -47,7 +47,8 @@ class BuildController extends Controller
      */
     public function show($id)
     {
-        //
+        $character = Characters::where('id', $id)->first();
+        return view('builds/show', compact('character'));
     }
 
     /**
