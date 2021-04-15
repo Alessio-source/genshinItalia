@@ -36,7 +36,7 @@
             </div>
         </header>
 
-        <main>
+        <main class="container">
             <div class="cards">
                 @foreach ($characters as $character)
                 <div class="card">
