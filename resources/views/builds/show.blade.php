@@ -1,22 +1,28 @@
-<!DOCTYPE html>
-<html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+@extends('layouts.layout')
 
-        <link rel="shortcut icon" href="{{ asset('images/favico.png') }}" type="image/x-icon">
+@section('page_name')
+    {{ $character->name }}
+@endsection
 
-        <title>Genshin Italia - {{ $character->name }}</title>
-    </head>
-    <body>
+@section('page_class')
+    build_show
+@endsection
 
-        <main>
-            <section class="character-info">
-                <h2>{{ $character->name }}</h2>
-                <img src="{{ asset('storage/' . $character->img_path ) }}" alt="{{ $character->name }}">
-                <p>{{ $character->legendary == true ? "Leggendario" : "Epico" }}</p>
-            </section>
-        </main>
-    </body>
-</html>
+@section('header_link')
+    <li><a href="{{ url('/') }}">Homepage</a></li>
+    <li><a href="">News</a></li>
+    <li><a href="{{ route('build.index') }}">Build</a></li>
+    <li><a href="">Chi siamo?</a></li>
+    <li><a href="">Contatti</a></li>
+    @auth
+    <li><a href="{{ route('dashboard.index') }}">Pannello di controllo</a></li>
+    @endauth
+@endsection
+
+@section('main')
+    <section class="info_pg container">
+        <h3>{{$character->name}}</h3>
+        <img src="{{ asset('storage/' . $character->img_path) }}" alt="{{$character->name}}">
+        <p>Categoria: {{ $character->legendary == true ? "leggendario" : "epico" }}</p>
+    </section>
+@endsection
