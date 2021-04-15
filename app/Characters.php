@@ -9,6 +9,7 @@ class Characters extends Model
     protected $fillable = [
         "user_id",
         "name",
-        "img_path"
+        "img_path",
+        "legendary"
     ];
 }

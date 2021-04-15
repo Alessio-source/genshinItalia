@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
+        <link rel="shortcut icon" href="{{ asset('images/favico.png') }}" type="image/x-icon">
+
         <title>GenshinItalia - Builds</title>
 
     </head>
@@ -38,10 +40,12 @@
             <div class="cards">
                 @foreach ($characters as $character)
                 <div class="card">
-                    <div class="container_img">
-                        <img src="{{ asset('storage/' . $character->img_path) }}" alt="">
-                    </div>
-                    <p>{{ $character->name }}</p>
+                    <a href="{{ route("build.show", $character->id ) }}">
+                        <div class="container_img {{  $character->legendary == 1 ? "legendary" : "epic" }}">
+                            <img src="{{ asset('storage/' . $character->img_path) }}" alt="">
+                        </div>
+                        <p>{{ $character->name }}</p>
+                    </a>
                 </div>
                 @endforeach
             </div>

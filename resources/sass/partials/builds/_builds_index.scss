@@ -26,6 +26,10 @@
                 padding-bottom: 5px;
                 overflow: hidden;
                 width: 100px;
+                a {
+                    color: $spaceCadet;
+                    text-decoration: none;
+                }
                 &:hover {
                     cursor: pointer;
                     .container_img {
@@ -35,8 +39,13 @@
                     }
 
                 }
-                .container_img {
+                .legendary {
                     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(139,91,61,1) 0%, rgba(179,113,48,1) 39%);
+                }
+                .epic {
+                    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(96,88,145,1) 0%, rgba(124,107,160,1) 39%);
+                }
+                .container_img {
                     border-radius: 0 0 13px 0;
                     overflow: hidden;
                     margin-bottom: 5px;

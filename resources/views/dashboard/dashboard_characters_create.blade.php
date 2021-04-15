@@ -41,6 +41,11 @@
         <label for="img_path">Inserisci una immagine: </label>
         <input type="file" name="img_path" id="image" accept="images/*" required>
 
+        <div class="check">
+            <label for="legendary">Legendario: </label>
+            <input type="checkbox" name="legendary" id="legendary" value="1">
+        </div>
+
         <div class="buttons">
             <input type="submit" value="Aggiungi" class="btn">
             <a href="{{ route('dashboard.characters.index') }}" class="btn">Torna indietro</a>

@@ -507,14 +507,23 @@ header .container a {
   overflow: hidden;
   width: 100px;
 }
+.build_index main .cards .card a {
+  color: #2B2D42;
+  text-decoration: none;
+}
 .build_index main .cards .card:hover {
   cursor: pointer;
 }
 .build_index main .cards .card:hover .container_img img {
   transform: scale(1.2);
 }
-.build_index main .cards .card .container_img {
+.build_index main .cards .card .legendary {
   background: linear-gradient(180deg, #020024 0%, #8b5b3d 0%, #b37130 39%);
+}
+.build_index main .cards .card .epic {
+  background: linear-gradient(180deg, #020024 0%, #605891 0%, #7c6ba0 39%);
+}
+.build_index main .cards .card .container_img {
   border-radius: 0 0 13px 0;
   overflow: hidden;
   margin-bottom: 5px;

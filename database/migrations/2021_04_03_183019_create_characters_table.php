@@ -18,6 +18,7 @@ class CreateCharactersTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('name', 255);
             $table->text('img_path');
+            $table->boolean('legendary')->default(0);
             $table->timestamps();
         });
     }
