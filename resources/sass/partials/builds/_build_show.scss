@@ -1,0 +1,21 @@
+.build_show {
+    main {
+        .info_pg {
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            img {
+                width: 150px;
+                height: 150px;
+                margin-right: 10px;
+            }
+            .info_text {
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

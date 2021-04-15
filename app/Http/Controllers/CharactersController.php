@@ -12,7 +12,9 @@ class CharactersController extends Controller
 {
     private $validateData = [
         'name' => 'required|max:255',
-        'img_path' => 'required|mimes:jpeg,png,jpg,gif,svg|image'
+        'img_path' => 'required|mimes:jpeg,png,jpg,gif,svg|image',
+        'type' => 'required',
+        'weapon' => 'required'
     ];
     /**
      * Display a listing of the resource.
@@ -96,7 +98,9 @@ class CharactersController extends Controller
             $data["img_path"] = $character->img_path;
             
             $request->validate([
-                'name' => 'required|max:255'
+                'name' => 'required|max:255',
+                'type' => 'required',
+                'weapon' => 'required'
             ]);
         } else {
             $data['img_path'] = Storage::disk('public')->put('images', $data['img_path']);

@@ -10,6 +10,8 @@ class Characters extends Model
         "user_id",
         "name",
         "img_path",
-        "legendary"
+        "legendary",
+        "type",
+        "weapon"
     ];
 }

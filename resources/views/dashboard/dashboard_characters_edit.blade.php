@@ -42,6 +42,33 @@
         <input type="file" name="img_path" id="image" accept="images/*" required>
         <img src="{{ asset('storage/' . $character->img_path) }}" alt="{{ $character->name }}">
 
+        <div class="check">
+            <label for="legendary">Leggendario: </label>
+            <input type="checkbox" name="legendary" id="legendary" value="1">
+        </div>
+
+        <label for="type">Elemento: </label>
+        <select name="type" id="type" required>
+            <option value="">Seleziona una opzione</option>
+            <option value="Anemo">Anemo</option>
+            <option value="Pyro">Pyro</option>
+            <option value="Hydro">Hydro</option>
+            <option value="Electro">Electro</option>
+            <option value="Dendero">Dendero</option>
+            <option value="Cryo">Cryo</option>
+            <option value="Geo">Geo</option>
+        </select>
+
+        <label for="weapon">Arma: </label>
+        <select name="weapon" id="weapon" required>
+            <option value="">Seleziona una opzione</option>
+            <option value="Lancia">Lancia</option>
+            <option value="Spada">Spada</option>
+            <option value="Spada a due mani">Spada a due mani</option>
+            <option value="Arco">Arco</option>
+            <option value="Catalyst">Catalyst</option>
+        </select>
+
         <div class="buttons">
             <input type="submit" value="Modifica" class="btn">
             <a href="{{ route('dashboard.characters.index') }}" class="btn">Torna indietro</a>

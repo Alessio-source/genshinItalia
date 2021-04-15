@@ -19,6 +19,8 @@ class CreateCharactersTable extends Migration
             $table->string('name', 255);
             $table->text('img_path');
             $table->boolean('legendary')->default(0);
+            $table->string('type', 80);
+            $table->string('weapon', 80);
             $table->timestamps();
         });
     }

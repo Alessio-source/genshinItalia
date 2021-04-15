@@ -21,8 +21,12 @@
 
 @section('main')
     <section class="info_pg container">
-        <h3>{{$character->name}}</h3>
         <img src="{{ asset('storage/' . $character->img_path) }}" alt="{{$character->name}}">
-        <p>Categoria: {{ $character->legendary == true ? "leggendario" : "epico" }}</p>
+        <div class="info_text">
+            <h3>{{$character->name}}</h3>
+            <p>Categoria: {{ $character->legendary == true ? "leggendario" : "epico" }}</p>
+            <p>Tipo: {{$character->type}}</p>
+            <p>Arma: {{$character->weapon}}</p>
+        </div>
     </section>
 @endsection
