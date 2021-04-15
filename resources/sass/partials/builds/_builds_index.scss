@@ -18,7 +18,9 @@
             margin-top: 50px;
             border-radius: 10px;
             background-color: #ddd;
+            overflow-y: auto;
             .card {
+                margin: 0 10px;
                 display: inline-block;
                 text-align: center;
                 background-color: $aliceBlue;

@@ -497,8 +497,10 @@ header .container a {
   margin-top: 50px;
   border-radius: 10px;
   background-color: #ddd;
+  overflow-y: auto;
 }
 .build_index main .cards .card {
+  margin: 0 10px;
   display: inline-block;
   text-align: center;
   background-color: #EDF2F4;
