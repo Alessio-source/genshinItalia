@@ -29,4 +29,14 @@
             <p>Arma: {{$character->weapon}}</p>
         </div>
     </section>
+
+    <section class="weapon container">
+        <h2>Armi consigliate</h2>
+    </section>
+
+    <section class="artefacts container">
+        <h2>Artefatti consigliati</h2>
+    </section>
+
+    <h6 class="container">* quelli che diamo noi sono solo consigli sulla base della nostra esperienza in gioco, siete liberi di equipaggiare quello che credete essere meglio per voi.</h6>
 @endsection
