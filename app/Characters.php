@@ -14,4 +14,8 @@ class Characters extends Model
         "type",
         "weapon"
     ];
+
+    public function Weapons(){
+        return $this->belongsToMany('App\Weapons');
+    }
 }

@@ -61,11 +61,11 @@
         <label for="weapon">Arma: </label>
         <select name="weapon" id="weapon" required>
             <option value="">Seleziona una opzione</option>
-            <option value="Lancia">Lancia</option>
-            <option value="Spada">Spada</option>
-            <option value="Spada a due mani">Spada a due mani</option>
-            <option value="Arco">Arco</option>
-            <option value="Catalyst">Catalyst</option>
+            <option value="polearm">Lancia</option>
+            <option value="sword">Spada</option>
+            <option value="claymore">Spada a due mani</option>
+            <option value="bow">Arco</option>
+            <option value="catalyst">Catalyst</option>
         </select>
 
         <div class="buttons">
