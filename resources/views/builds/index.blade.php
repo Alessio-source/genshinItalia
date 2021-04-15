@@ -15,6 +15,8 @@
     </head>
     <body class="build_index">
 
+        <div class="layover"></div>
+
         <header>
             <div class="container">
                 <section class="right">

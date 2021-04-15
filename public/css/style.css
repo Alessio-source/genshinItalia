@@ -481,6 +481,14 @@ header .container a {
   background-image: url("https://wallpaperaccess.com/full/3628936.jpg");
   background-size: cover;
 }
+.build_index .layover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 .build_index main {
   width: 100%;
   height: 100vh;
@@ -491,6 +499,8 @@ header .container a {
 .build_index main .cards {
   width: 100%;
   height: 80%;
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
@@ -510,6 +520,7 @@ header .container a {
   text-align: center;
   background-color: #EDF2F4;
   overflow: hidden;
+  border: none;
 }
 .build_index main .cards .card a {
   color: #2B2D42;
