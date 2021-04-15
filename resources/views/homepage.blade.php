@@ -8,6 +8,16 @@
     homepage
 @endsection
 
+@section('header_link')
+    <li><a href="">News</a></li>
+    <li><a href="{{ route('build.index') }}">Build</a></li>
+    <li><a href="">Chi siamo?</a></li>
+    <li><a href="">Contatti</a></li>
+    @auth
+    <li><a href="{{ route('dashboard.index') }}">Pannello di controllo</a></li>
+    @endauth
+@endsection
+
 @section('main')
 
     <div class="container">

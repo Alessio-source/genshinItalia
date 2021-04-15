@@ -8,6 +8,17 @@
     build_index
 @endsection
 
+
+@section('header_link')
+    <li><a href="{{ url('/') }}">Homepage</a></li>
+    <li><a href="">News</a></li>
+    <li><a href="">Chi siamo?</a></li>
+    <li><a href="">Contatti</a></li>
+    @auth
+    <li><a href="{{ route('dashboard.index') }}">Pannello di controllo</a></li>
+    @endauth
+@endsection
+
 @section('main')
     <h2 class="container">Lista personaggi</h2>
     <div class="cards container">
