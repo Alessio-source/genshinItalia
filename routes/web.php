@@ -33,7 +33,10 @@ Route::prefix('dashboard')
         Route::get('/', 'DashboardController@index')->name('index');
         Route::resource('news', 'NewsController');
         Route::resource('characters', 'CharactersController');
-        Route::resource('characters/info', 'CharactersController');
+        Route::get('characters/info/{id}', 'InfoCharactersController@create')->name('info.create');
+        Route::post('characters/info/{id}', 'InfoCharactersController@store')->name('info.store');
+        Route::get('characters/info/{info}/edit', 'InfoCharactersController@edit')->name('info.edit');
+        Route::get('characters/info/{info}', 'InfoCharactersController@update')->name('info.update');
 
     });
 

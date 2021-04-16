@@ -18,4 +18,8 @@ class Characters extends Model
     public function Weapons(){
         return $this->belongsToMany('App\Weapons');
     }
+
+    public function Artefacts(){
+        return $this->belongsToMany('App\Artefacts');
+    }
 }

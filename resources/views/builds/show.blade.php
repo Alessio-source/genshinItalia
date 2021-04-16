@@ -32,10 +32,16 @@
 
     <section class="weapon container">
         <h2>Armi consigliate</h2>
+        @foreach ($character->weapons as $weapon)
+            <p>{{ $weapon->name }}</p>
+        @endforeach
     </section>
 
     <section class="artefacts container">
         <h2>Artefatti consigliati</h2>
+        @foreach ($character->artefacts as $artefact)
+            <p>{{ $artefact->name }}</p>
+        @endforeach
     </section>
 
     <h6 class="container">* quelli che diamo noi sono solo consigli sulla base della nostra esperienza in gioco, siete liberi di equipaggiare quello che credete essere meglio per voi.</h6>

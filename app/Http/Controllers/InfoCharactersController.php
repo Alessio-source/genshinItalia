@@ -4,18 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Characters;
+use App\Weapons;
+use App\Artefacts;
 
 class InfoCharactersController extends Controller
 {
-
+    private $validateData = [
+        'weapon' => "required",
+        'artefact' => "required"
+    ];
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Characters $character)
+    public function create($id)
     {
-        return view('dashboard_info_create', compact('character'));
+        $character = Characters::where('id', $id)->first();
+        $weapons = Weapons::where('type', $character->weapon)->get();
+        $artefacts = Artefacts::all();
+        return view('dashboard.dashboard_info_create', compact('character', 'weapons', 'artefacts'));
     }
 
     /**
@@ -24,9 +32,15 @@ class InfoCharactersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $character = Characters::where('id', $id)->first();
+        $character->Weapons()->attach($data["weapon"]);
+        $character->Artefacts()->attach($data["artefacts"]);
+
+        return redirect()->route('dashboard.characters.index')->with('Message', 'Personaggio ' . $character->name . " creato correttamente!");
+        
     }
 
     /**

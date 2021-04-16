@@ -1,0 +1,21 @@
+.info_create {
+    main {
+        form {
+            display: flex;
+            justify-content: flex-start;
+            align-content: flex-start;
+            flex-direction: column;
+            label {
+                margin-top: 20px;
+            }
+            input[type="submit"] {
+                font-weight: 700;
+                background-color: $amaranthRed;
+                color: $aliceBlue;
+            }
+            .buttons {
+                margin-top: 20px;
+            }
+        }
+    }
+}

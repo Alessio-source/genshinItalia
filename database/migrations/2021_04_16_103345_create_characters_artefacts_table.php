@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCharactersWeaponsTable extends Migration
+class CreateCharactersArtefactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCharactersWeaponsTable extends Migration
      */
     public function up()
     {
-        Schema::create('characters_weapons', function (Blueprint $table) {
+        Schema::create('artefacts_characters', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('characters_id');
-            $table->unsignedBigInteger('weapons_id');
+            $table->unsignedBigInteger('artefacts_id');
             $table->timestamps();
 
             $table->foreign('characters_id')
@@ -24,9 +24,9 @@ class CreateCharactersWeaponsTable extends Migration
                   ->on('characters')
                   ->onDelete('cascade');
 
-            $table->foreign('weapons_id')
+            $table->foreign('artefacts_id')
                   ->references('id')
-                  ->on('weapons')
+                  ->on('artefacts')
                   ->onDelete('cascade');
         });
     }
@@ -38,6 +38,6 @@ class CreateCharactersWeaponsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('characters_weapons');
+        Schema::dropIfExists('artefacts_characters');
     }
 }

@@ -498,6 +498,24 @@ header .container a {
   margin-top: 20px;
 }
 
+.info_create main form {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.info_create main form label {
+  margin-top: 20px;
+}
+.info_create main form input[type=submit] {
+  font-weight: 700;
+  background-color: #D90429;
+  color: #EDF2F4;
+}
+.info_create main form .buttons {
+  margin-top: 20px;
+}
+
 .build_index .cards {
   display: flex;
   justify-content: flex-start;
