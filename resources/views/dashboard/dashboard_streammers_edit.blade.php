@@ -1,11 +1,11 @@
 @extends('dashboard.layout')
 
 @section('page_name')
-    Creazione News
+    Modifica streammer
 @endsection
 
 @section('page_class')
-    news_create
+    streammers_create
 @endsection
 
 @section('aside_links')
@@ -29,23 +29,15 @@
     </div>
     @endif
 
-    <form action="{{ route('dashboard.news.store') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('dashboard.streammer.update', $streammer->id) }}" method="POST">
         @csrf
-        @method('POST')
-        <h1>Creazione News</h1>
-
-        <label for="title">Inserisci un titolo: </label>
-        <input type="text" placeholder="Titolo" name="title" id="title" required>
-
-        <label for="text">Inserisci il testo della news: </label>
-        <textarea name="text" id="text" rows="10" placeholder="Inserisci il testo della news" required></textarea>
-
-        <label for="img_path">Inserisci una immagine: </label>
-        <input type="file" name="img_path" id="image" accept="images/*" required>
+        @method('PUT')
+        <h2>Modifica streammer</h2>
+        <label for="name">Inserisci il nome dello streammer: </label>
+        <input type="text" name="name" id="name" required value="{{ $streammer->name }}">
 
         <div class="buttons">
-            <input type="submit" value="Crea" class="btn">
-            <a href="{{ route('dashboard.news.index') }}" class="btn">Torna indietro</a>
+            <input type="submit" class="btn" value="Modifica streammer">
         </div>
     </form>
 @endsection

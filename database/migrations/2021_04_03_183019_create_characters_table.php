@@ -21,6 +21,7 @@ class CreateCharactersTable extends Migration
             $table->boolean('legendary')->default(0);
             $table->string('type', 80);
             $table->string('weapon', 80);
+            $table->text('info');
             $table->timestamps();
         });
     }

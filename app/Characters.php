@@ -12,7 +12,8 @@ class Characters extends Model
         "img_path",
         "legendary",
         "type",
-        "weapon"
+        "weapon",
+        "info"
     ];
 
     public function Weapons(){

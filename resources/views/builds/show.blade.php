@@ -30,6 +30,11 @@
         </div>
     </section>
 
+    <section class="info container">
+        <h2>Info</h2>
+        <p>{{$character->info}}</p>
+    </section>
+
     <section class="weapon container">
         <h2>Armi consigliate</h2>
         @foreach ($character->weapons as $weapon)
@@ -40,7 +45,7 @@
     <section class="artefacts container">
         <h2>Artefatti consigliati</h2>
         @foreach ($character->artefacts as $artefact)
-            <p>{{ $artefact->name }}</p>
+            <p>{{ $artefact->name }} x{{ $artefact->quantity }}</p>
         @endforeach
     </section>
 

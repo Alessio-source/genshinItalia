@@ -5,11 +5,11 @@
 @endsection
 
 @section('page_name')
-    Characters
+    Streammers
 @endsection
 
 @section('page_class')
-    characters_index
+    streammers_index
 @endsection
 
 @section('aside_links')
@@ -17,6 +17,7 @@
     <li class="item"><a href="{{ url('/') }}">Homepage</a></li>
     <li class="item"><a href="{{ route('dashboard.index') }}">User</a></li>
     <li class="item"><a href="{{ route('dashboard.news.index') }}">News</a></li>
+    <li class="item"><a href="{{ route('dashboard.characters.index') }}">Personaggi</a></li>
     <li class="item"><a href="{{ route('dashboard.streammer.index') }}">Streammers</a></li>
 @endsection
 
@@ -28,16 +29,15 @@
     </div>
     @endif
 
-    <a href="{{ route('dashboard.characters.create') }}">Aggiungi personaggio</a>
+    <a href="{{ route('dashboard.streammer.create') }}">Aggiungi un nuovo streammer</a>
 
     <div class="cards">
-        @foreach ($characters as $character)
+        @foreach ($streammers as $streammer)
         <div class="card">
-            <h3>{{ $character->name }}</h3>
-            <img src="{{ asset('storage/' . $character->img_path) }}" alt="">
+            <h3>{{ $streammer->name }}</h3>
             <div>
-                <a href="{{ route('dashboard.characters.edit', $character->id) }}"><i class="fas fa-pen-square"></i></a>
-                <form action="{{ route('dashboard.characters.destroy', $character->id) }}" method="POST">
+                <a href="{{ route('dashboard.streammer.edit', $streammer->id) }}"><i class="fas fa-pen-square"></i></a>
+                <form action="{{ route('dashboard.streammer.destroy', $streammer->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" ><i class="fas fa-trash-alt"></i></button>
@@ -46,4 +46,5 @@
         </div>
         @endforeach
     </div>
+
 @endsection

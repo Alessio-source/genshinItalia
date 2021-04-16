@@ -46,40 +46,14 @@
             <h2>Streamer consigliati</h2>
 
             <div class="list">
+                @foreach ($streammers as $streammer)
                 <div class="streammer">
                     <iframe
-                        src="https://player.twitch.tv/?channel=zergantis_official&parent=127.0.0.1&muted=true"
+                        src="{{ "https://player.twitch.tv/?channel=" . $streammer->name . "&parent=127.0.0.1&muted=true" }}"
                         allowfullscreen="true">
                     </iframe>
                 </div>
-
-                <div class="streammer">
-                    <iframe
-                        src="https://player.twitch.tv/?channel=ytgiul&parent=127.0.0.1&muted=true"
-                        allowfullscreen="true">
-                    </iframe>
-                </div>
-
-                <div class="streammer">
-                    <iframe
-                        src="https://player.twitch.tv/?channel=lothersensei&parent=127.0.0.1&muted=true"
-                        allowfullscreen="true">
-                    </iframe>
-                </div>
-
-                <div class="streammer">
-                    <iframe
-                        src="https://player.twitch.tv/?channel=kalandorf&parent=127.0.0.1&muted=true"
-                        allowfullscreen="true">
-                    </iframe>
-                </div>
-
-                <div class="streammer">
-                    <iframe
-                        src="https://player.twitch.tv/?channel=kurolily&parent=127.0.0.1&muted=true"
-                        allowfullscreen="true">
-                    </iframe>
-                </div>
+                @endforeach
             </div>
 
         </section>

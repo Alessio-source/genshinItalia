@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\news;
+use App\Streammers;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,8 @@ use App\news;
 
 Route::get('/', function () {
     $news = News::all();
-    return view('homepage', compact('news'));
+    $streammers = Streammers::all();
+    return view('homepage', compact('news', 'streammers'));
 });
 
 Auth::routes();
@@ -37,6 +39,7 @@ Route::prefix('dashboard')
         Route::post('characters/info/{id}', 'InfoCharactersController@store')->name('info.store');
         Route::get('characters/info/{info}/edit', 'InfoCharactersController@edit')->name('info.edit');
         Route::get('characters/info/{info}', 'InfoCharactersController@update')->name('info.update');
+        Route::resource('streammer', 'StreammerController');
 
     });
 

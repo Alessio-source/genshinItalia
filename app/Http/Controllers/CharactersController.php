@@ -14,7 +14,8 @@ class CharactersController extends Controller
         'name' => 'required|max:255',
         'img_path' => 'required|mimes:jpeg,png,jpg,gif,svg|image',
         'type' => 'required',
-        'weapon' => 'required'
+        'weapon' => 'required',
+        'info' => 'required'
     ];
     /**
      * Display a listing of the resource.

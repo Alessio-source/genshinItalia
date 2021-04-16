@@ -14,7 +14,7 @@
     <li class="item"><a href="{{ route('dashboard.index') }}">User</a></li>
     <li class="item"><a href="{{ route('dashboard.news.index') }}">News</a></li>
     <li class="item"><a href="{{ route('dashboard.characters.index') }}">Personaggi</a></li>
-    <li class="item"><a href="">Links</a></li>
+    <li class="item"><a href="{{ route('dashboard.streammer.index') }}">Streammers</a></li>
 @endsection
 
 @section('main')

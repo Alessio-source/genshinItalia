@@ -14,7 +14,7 @@
     <li class="item"><a href="{{ route('dashboard.index') }}">User</a></li>
     <li class="item"><a href="{{ route('dashboard.news.index') }}">News</a></li>
     <li class="item"><a href="{{ route('dashboard.characters.index') }}">Personaggi</a></li>
-    <li class="item"><a href="">Links</a></li>
+    <li class="item"><a href="{{ route('dashboard.streammer.index') }}">Streammers</a></li>
 @endsection
 
 @section('main')
@@ -67,6 +67,9 @@
             <option value="bow">Arco</option>
             <option value="catalyst">Catalyst</option>
         </select>
+
+        <label for="info">Inserisci una breve descrizione</label>
+        <textarea name="info" id="info" rows="10" required></textarea>
 
         <div class="buttons">
             <input type="submit" value="Aggiungi" class="btn">
