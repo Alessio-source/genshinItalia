@@ -121,8 +121,9 @@ class CharactersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Characters $character)
     {
-        //
+        $character->delete();
+        return redirect()->route('dashboard.characters.index')->with('Message', 'Personaggio cancellato corettamente');
     }
 }
