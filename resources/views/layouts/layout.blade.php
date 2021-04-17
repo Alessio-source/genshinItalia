@@ -60,8 +60,7 @@
                     <h5>Link Utili</h5>
                     <a href="">News</a>
                     <a href="{{ route('build.index') }}">Build</a>
-                    <a href="">Chi siamo?</a>
-                    <a href="">Contatti</a>
+                    <a href="https://discord.gg/QVaEjC2BJ8">Discord</a>
                 </div>
             </div>
 

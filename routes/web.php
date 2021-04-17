@@ -25,6 +25,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('build', 'BuildController');
+Route::resource('news', 'NewsPagesController');
 
 
 Route::prefix('dashboard')

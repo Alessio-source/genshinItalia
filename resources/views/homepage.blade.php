@@ -9,10 +9,9 @@
 @endsection
 
 @section('header_link')
-    <li><a href="">News</a></li>
+    <li><a href="{{ route('news.index') }}">News</a></li>
     <li><a href="{{ route('build.index') }}">Build</a></li>
-    <li><a href="">Chi siamo?</a></li>
-    <li><a href="">Contatti</a></li>
+    <li><a href="https://discord.gg/QVaEjC2BJ8">Discord</a></li>
     @auth
     <li><a href="{{ route('dashboard.index') }}">Pannello di controllo</a></li>
     @endauth
