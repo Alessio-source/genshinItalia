@@ -629,3 +629,40 @@ header .container a {
 .build_show main .info_pg .info_text p {
   margin: 0;
 }
+
+.news_index main .cards {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.news_index main .cards .card {
+  width: calc((100% / 3) - 10px);
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid #2B2D42;
+}
+.news_index main .cards .card a {
+  color: #2B2D42;
+  text-decoration: none;
+}
+.news_index main .cards .card a h3 {
+  padding: 15px;
+  text-align: center;
+}
+.news_index main .cards .card a img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-bottom: 15px;
+}
+.news_index main .cards .card a p {
+  padding: 0 15px;
+}
+.news_index main .cards .card a h4 {
+  padding: 0 15px;
+}

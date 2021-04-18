@@ -32,8 +32,11 @@
                                 <div class="img_container">
                                     <img src="{{ asset('storage/' . $item->img_path) }}" alt="{{ $item->title }}">
                                 </div>
-
-                                <p>{{ $item->text }}</p>
+                                @if (strlen($item->text) > 500)
+                                    <p>{{ substr($item->text, 0, 500) . "..." }}</p>
+                                @else
+                                    <p>{{ $item->text }}</p>
+                                @endif
                             </a>
                         </div>
                     @endif

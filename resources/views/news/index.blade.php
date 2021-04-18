@@ -22,11 +22,19 @@
     <div class="cards container">
         @foreach ($news as $item)
             <div class="card">
-                <h3>{{ $item->title }}</h3>
-                <img src="{{ asset('storage/' . $item->img_path) }}" alt="">
-                <p>{{ $item->text }}</p>
-                <h4>Autore</h4>
-                <p>{{ $item->user->name }}</p>
+                <a href="{{ route('news.show', $item->id) }}">
+                    <h3>- {{ $item->title }} -</h3>
+                    <img src="{{ asset('storage/' . $item->img_path) }}" alt="">
+                    <p>Data: {{$item->created_at}}</p>
+                    @if (strlen($item->text) > 500)
+                        <p>{{ substr($item->text, 0, 500) . "..." }}</p>
+                    @else
+                        <p>{{ $item->text }}</p>
+                    @endif
+
+                    <h4>Autore</h4>
+                    <p>{{ $item->user->name }}</p>
+                </a>
             </div>
         @endforeach
     </div>

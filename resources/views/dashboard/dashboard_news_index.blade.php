@@ -35,7 +35,13 @@
         <div class="card">
             <h3>{{ $news->title }}</h3>
             <img src="{{ asset('storage/' . $news->img_path) }}" alt="">
-            <p>{{ $news->text }}</p>
+
+            @if (strlen($news->text) > 500)
+                <p>{{ substr($news->text, 0, 500) . "..." }}</p>
+            @else
+                <p>{{ $news->text }}</p>
+            @endif
+
             <div>
                 <a href="{{ route('dashboard.news.edit', $news->id) }}"><i class="fas fa-pen-square"></i></a>
                 <form action="{{ route('dashboard.news.destroy', $news->id) }}" method="POST">
