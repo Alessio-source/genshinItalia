@@ -26,7 +26,7 @@
                 @foreach ($news as $key => $item)
                     @if($key > $news->count() - 4)
                         <div class="card">
-                            <a href="">
+                            <a href="{{ route('news.show', $item->id) }}">
                                 <h3>- {{ $item->title }} -</h3>
 
                                 <div class="img_container">
