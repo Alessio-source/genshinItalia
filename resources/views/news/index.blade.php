@@ -27,9 +27,9 @@
                     <img src="{{ asset('storage/' . $item->img_path) }}" alt="">
                     <p>Data: {{$item->created_at}}</p>
                     @if (strlen($item->text) > 500)
-                        <p>{{ substr($item->text, 0, 500) . "..." }}</p>
+                        <p>{!! substr($item->text, 0, 500) . "..." !!}</p>
                     @else
-                        <p>{{ $item->text }}</p>
+                        <p>{!! $item->text !!}</p>
                     @endif
 
                     <h4>Autore</h4>

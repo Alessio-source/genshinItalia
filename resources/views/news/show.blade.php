@@ -23,7 +23,7 @@
         <img src="{{ asset('storage/' . $news->img_path) }}" alt="{{ $news->title }}">
         <h1>{{ $news->title }}</h1>
 
-        <p>{{ $news->text }}</p>
+        <p>{!! $news->text !!}</p>
         <p>Data: {{ $news->created_at }}</p>
 
         <h4>Autore</h4>
