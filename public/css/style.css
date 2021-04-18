@@ -211,6 +211,35 @@ header .container a {
   border-radius: 5px;
 }
 
+.error_404 main {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.error_404 main .layover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.error_404 main .layover p {
+  font-size: 3em;
+}
+.error_404 main .layover a {
+  padding: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: #EF233C;
+  color: white;
+}
+
 .dashboard main {
   display: flex;
 }
